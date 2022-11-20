@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<link rel="icon" type="image/svg+xml" href="./favicon.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Siren</title>
+		<script type="module" src="/main.js"></script>
+	</head>
+	<body>
+		<aside id="app_menu" class="app_menu">
+			<img id="app_menu_close" src="./icons8-close.svg" alt="close" />
+			<nav id="app_navigation">
+				<ul class="navigation__list" id="app_navigation_list">
+					<li class="navlink" id="navlink" data-link="check-siren">
+						Vérifier un n° SIREN
+					</li>
+					<li class="navlink" id="navlink" data-link="generate-siren">
+						Générer un n° SIREN
+					</li>
+				</ul>
+			</nav>
+		</aside>
+		<main id="app_content" class="app_content">
+			<img
+				id="app_content_menu_icon"
+				class="menuIcon"
+				src="./menu.svg"
+				alt="menu"
+			/>
+			<section data-page="check-siren" class="checkSiren" id="page">
+				<div class="wrapper">
+					<h2>🧜‍♀️ Vérifier un n° SIREN</h2>
+					<form id="check_siren_form" class="sirenForm">
+						<label for="siren">Renseignez un n° SIREN</label>
+						<input type="number" name="siren" id="siren" />
+						<p class="error" id="check_siren_form_error"></p>
+						<button type="submit">Vérifier</button>
+					</form>
+					<div id="check_siren_message"></div>
+				</div>
+			</section>
+			<section data-page="generate-siren" class="generateSiren" id="page">
+				<div class="wrapper">
+					<h2>🧜‍♀️ Générer aléatoirement le dernier chiffre de mon n° SIREN</h2>
+					<form id="generate_partial_siren_form" class="sirenForm">
+						<label for="partial_siren"
+							>Renseignez les 8 premiers chiffres</label
+						>
+						<input type="number" name="partial_siren" id="partial_siren" />
+						<p class="error" id="generate_partial_siren_form_error"></p>
+						<button type="submit">Générer</button>
+					</form>
+					<div id="display_partial_siren" class="displaySiren"></div>
+				</div>
+				<div class="wrapper">
+					<h2>🧜‍♀️ Générer aléatoirement mon n° SIREN</h2>
+					<button id="generate_siren_button">Générer</button>
+					<div id="display_siren" class="displaySiren"></div>
+				</div>
+			</section>
+		</main>
+	</body>
+</html>
